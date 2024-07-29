@@ -1,13 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Temperature</title>
+
+    <link rel="stylesheet" href="./styles/mystyle.css">
 </head>
+
 <body>
-    <h1>Simple Calculator</h1>
-     
+    <div class="img-flex">
+            <img src="./images/O9S1SH1-02.png" alt="" height="50px">
+            <img src="./images/O9S1SH1-03.png" alt="" height="50px">
+            <img src="./images/O9S1SH1-02.png" alt="" height="50px">
+    </div>
+    <h1 style="color: #f0d104;">Convert Celsius to Fahrenheit</h1>
+
+    <div class="display-temperature">
+        <button onclick="temp()">Convert Celsius to Fahrenheit</button>
+        <div id="result"></div>
+    </div>
+
     <script src="./scripts/script.js"></script>
-</body>
+
 </html>
