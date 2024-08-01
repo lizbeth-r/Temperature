@@ -1,21 +1,23 @@
-function convertTemperature() {
-    var type = prompt("Enter 'C' for Celsius or 'F' for Fahrenheit:");
-    var temperature = Number(prompt("Enter the temperature:"));
-    
+function convertTemperatureRange(){
+    let startValue = Number(prompt("Enter a start value"));
+    let endValue = Number(prompt("Enter an end value:"));
+    var scale = prompt("Enter 'C' for Celsius or 'F' for Fahrenheit:")
 
-    if (type == 'C' || type == 'c') {
-        var fahrenheit = (temperature * 9 / 5) + 32;
-        document.getElementById("result").innerHTML += `
+    for(i=startValue; i<=endValue; i++){
+        if (scale == 'C' || scale == 'c') {
+            var fahrenheit = (i * 9 / 5) + 32;
+            document.getElementById("result").innerHTML += `
             <div class="text-result">
-                <p>The conversion of Celsius ${temperature}º to Fahrenheit is ${fahrenheit}º</p>
+            <p>The conversion of Celsius ${i}º to Fahrenheit is ${fahrenheit}º</p>
             </div>
-        `;
-    } else {
-        var celsius = (temperature - 32) * 5 / 9
-        document.getElementById("result").innerHTML += `
+            `;
+        } else {
+            var celsius = (i - 32) * 5 / 9
+            document.getElementById("result").innerHTML += `
             <div class="text-result">
-                <p>The conversion of Fahrenheit ${temperature}º to  is Celsius ${celsius}º</p>
+            <p>The conversion of Fahrenheit ${i}º to  is Celsius ${celsius}º</p>
             </div>
-        `;
+            `;
+        }
     }
-}
+ } 
